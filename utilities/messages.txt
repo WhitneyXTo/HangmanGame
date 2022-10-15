@@ -1,0 +1,14 @@
+Welcome to Hangman game!
+Do you need to see instruction before start? (y/n): 
+Do you need to see instruction again? 
+Select y' for showing the instruction again or 'n' to start the game:
+Please enter player name (less than 8 characters):
+Invalid Input!
+Hello {playername}, please choose a game level (easy/medium/hard): 
+Please choose a game level (easy/medium/hard): 
+   {prank}          {pname}          {plevel}           {pscore} 
+Congratulation {pname}!!! You got the word with {num_guess} wrong guesses!
+Sorry {pname}, you have used all your guesses, your word is {pword}.
+Please enter your letter of guessing: 
+Invalid input or letter has already been used!
+Do you want to play the game again? (y/n): 
