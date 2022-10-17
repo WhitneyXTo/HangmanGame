@@ -1,0 +1,5 @@
+Ranking       Player_Name       GameLevel      Score
+-------       -----------       ---------      -----
+   1          JULIUS--          EASY           600 
+   2          CEASAR--          MEDIUM         800  
+   3          NGUYET--          EASY           0 

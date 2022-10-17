@@ -8,17 +8,24 @@ import copy
 class Game():
     """A hangman game and its properties"""
     game_name = "Hangman"
+    
     def __init__(self,player):
+        """initialize # guesses, letters to guess, word, hidden word"""
         self.__guess=0
         self.player=player
+        #copy of set of all uppercase letter 
         self.letters=copy.deepcopy(LETTERS)
+        #call private method to get random word in uppercase
         self.word = self.__get_word(player.level)
-        print(self.word)
+        #set hidden word with "-" based on word's length
         self.hword = self.__get_hword()
 
+    #getter and setter for private var guess
     def get_guess(self):
+        """method returns number of guesses user took"""
         return self.__guess
     def set_guess(self,guess):
+        """method to set number of guesses"""
         self.__guess=guess
 
     def __get_word(self,level:str):
@@ -32,9 +39,10 @@ class Game():
             words = wfile.readlines()
             word = words[random.randint(0,len(words)-1)]
             wfile.close()  
-            return word.strip()
+            return word.upper().strip()
     
     def __get_hword(self):
+        """set hidden word with "-" based on word's length"""
         return list("-"*len(self.word))
     
     def draw_hangman(self,MESSAGES:list):

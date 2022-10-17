@@ -5,14 +5,14 @@ MESSAGE_FILE = 'utilities/messages.txt'
 INSTRUCTION_FILE = 'utilities/instruction.txt'
 
 def check_letter(letter:str,game:Game,MESSAGES:list):
-    if letter.lower() in game.word.lower():
+    """checks letter that user input in"""
+    if letter.upper() in game.word:
         i = 0
         while i < len(game.word):
-            if game.word[i].upper() == letter.upper():
+            if game.word[i] == letter.upper():
                 game.hword[i] = letter.upper()
             i+=1      
         game.letters.remove(letter.upper())
-
     else:
         game.set_guess(game.get_guess()+1)
         game.letters.remove(letter.upper())
@@ -27,8 +27,10 @@ def user_guessing(MESSAGES,game):
     game.draw_hangman(MESSAGES) 
     game.print_word(MESSAGES)
     
+    #game goes on until user win or lose
     round_continue = True
     while round_continue:
+        
         user_input = input(MESSAGES[11].strip()+" ")
         if len(user_input)>1 or\
             user_input.upper() not in game.letters:
@@ -38,9 +40,11 @@ def user_guessing(MESSAGES,game):
             #if True this round is ended
             round_continue = check_letter(user_input,\
                                 game,MESSAGES)
-
+        print("-------------------------------------------------")
+    
+    #ask if user want to continue another round
     while True:
-        user_continue = input(MESSAGES[13])
+        user_continue = input(MESSAGES[13]) # expect 'y' or 'n'
         if user_continue.upper()=='Y':
             return False
         elif user_continue.upper()=='N':
