@@ -1,5 +1,9 @@
-Ranking       Player_Name       GameLevel      Score
--------       -----------       ---------      -----
-   1          JULIUS--          EASY           600 
-   2          CEASAR--          MEDIUM         800  
-   3          NGUYET--          EASY           0 
+Ranking       Player_Name       Game_Level       Score
+-------       -----------       ----------       -----
+   0          PLAYER2            HARD            4000 
+   1          PLAYER3            EASY            2800 
+   2          LEE                HARD            2400 
+   3          PLAYER1            MEDIUM          1000 
+   4          COCO               MEDIUM          700 
+   5          WHITNEY            MEDIUM          700 
+   6          WHITNEY            EASY            100 

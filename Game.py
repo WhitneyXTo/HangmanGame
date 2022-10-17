@@ -49,7 +49,13 @@ class Game():
     
     def update_score(self):
         current_score = self.player.get_score()
-        self.player.set_score(current_score+self.streak*100)
+        base_score = 100
+        if self.player.level == "MEDIUM":
+            base_score = 400
+        elif self.player.level == "HARD":
+            base_score = 800
+        self.player.set_score(current_score
+                            +self.streak*base_score)
 
     def draw_hangman(self,MESSAGES:list):
         """prints out hangman based on user's guesses"""
@@ -68,6 +74,7 @@ class Game():
             final_word = "".join(item for item in self.word).upper()
             print(MESSAGES[10].format(pname=self.player.name,\
                                     pword = final_word))
+            self.player.player_ranking(MESSAGES)
             return False
         return True
     
@@ -81,6 +88,7 @@ class Game():
         if("-" not in self.hword):
             print(MESSAGES[9].format(pname=self.player.name\
                                     .upper(),num_guess=self.__guess))
+            self.player.player_ranking(MESSAGES)
             return False
         return True
     
