@@ -81,8 +81,9 @@ class Player():
                                             .split(","))
                     i += 1
                 previous_scores = [int(item[3]) for item in previous_highs]     
-                i = 0
-                while i < len(previous_scores) and i < 10:
+                
+                i = 0 #index for previous scores list
+                while i < len(previous_scores):
                     if self.__score >= previous_scores[i]:
                         previous_highs.insert(i,[1,self.name,self.level,self.__score])
                         break
@@ -93,7 +94,7 @@ class Player():
                 rfile.write(MESSAGES[15])
                 j = 0
                 while j < len(previous_highs):
-                    previous_highs[j][0] = j
+                    previous_highs[j][0] = j+1
                     name = self.__format_string(previous_highs[j][1],8)
                     level = self.__format_string(previous_highs[j][2],6)
                     player_str = MESSAGES[16].format(\
@@ -103,6 +104,8 @@ class Player():
                             pscore=previous_highs[j][3])
                     rfile.write(player_str+"\n")
                     j += 1
+                    if j == 10:
+                        break
             rfile.close()
         return " "
 

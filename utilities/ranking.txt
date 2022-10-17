@@ -1,9 +1,12 @@
 Ranking       Player_Name       Game_Level       Score
 -------       -----------       ----------       -----
-   0          PLAYER2            HARD            4000 
-   1          PLAYER3            EASY            2800 
-   2          LEE                HARD            2400 
-   3          PLAYER1            MEDIUM          1000 
-   4          COCO               MEDIUM          700 
-   5          WHITNEY            MEDIUM          700 
-   6          WHITNEY            EASY            100 
+   1          PLAYER2            HARD            4000 
+   2          PLAYER3            EASY            2800 
+   3          PLAYERX            MEDIUM          2400 
+   4          LEE                HARD            2400 
+   5          PLAYER6            MEDIUM          1200 
+   6          PLAYER4            MEDIUM          1200 
+   7          PLAYER1            MEDIUM          1000 
+   8          CHOCOLAT           MEDIUM          800 
+   9          PLAYER7            HARD            800 
+   10          COCO               MEDIUM          700 
