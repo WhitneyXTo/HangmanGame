@@ -1,3 +1,4 @@
+from Player import Player
 from constants import LETTERS
 from constants import WORD_BANKS
 from constants import INIT_DRAWING
@@ -12,6 +13,7 @@ class Game():
     def __init__(self,player):
         """initialize # guesses, letters to guess, word, hidden word"""
         self.__guess=0
+        self.streak = 0 # consecutive correct answer
         self.player=player
         #copy of set of all uppercase letter 
         self.letters=copy.deepcopy(LETTERS)
@@ -45,6 +47,10 @@ class Game():
         """set hidden word with "-" based on word's length"""
         return list("-"*len(self.word))
     
+    def update_score(self):
+        current_score = self.player.get_score()
+        self.player.set_score(current_score+self.streak*100)
+
     def draw_hangman(self,MESSAGES:list):
         """prints out hangman based on user's guesses"""
         drawing = copy.deepcopy(INIT_DRAWING)
@@ -62,7 +68,6 @@ class Game():
             final_word = "".join(item for item in self.word).upper()
             print(MESSAGES[10].format(pname=self.player.name,\
                                     pword = final_word))
-            self.player.set_score(0)                  
             return False
         return True
     
@@ -78,4 +83,6 @@ class Game():
                                     .upper(),num_guess=self.__guess))
             return False
         return True
+    
+
     

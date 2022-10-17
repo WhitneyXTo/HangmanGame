@@ -10,7 +10,7 @@ class Player():
         self.level = self.__get_player_level(MESSAGES)
     
     #getter and setter for private var score
-    def get__score(self):
+    def get_score(self):
         return self.__score
     def set_score(self,score):
         self.__score=score
@@ -45,8 +45,12 @@ class Player():
                 break
         return level
 
-    def player_ranking():
-        return " "
-
-    def __str__():
-        return " "
+    def __str__(self):
+        return f"{self.name}'s current score is {self.__score}"
+    
+    def __copy__(self,MESSAGES):
+        new_player = Player(MESSAGES)
+        new_player.name = self.name
+        new_player.level = self.level
+        new_player.set_score(self.get__score)
+        return new_player

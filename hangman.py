@@ -13,10 +13,12 @@ def check_letter(letter:str,game:Game,MESSAGES:list):
                 game.hword[i] = letter.upper()
             i+=1      
         game.letters.remove(letter.upper())
+        game.streak += 1
+        game.update_score()
     else:
         game.set_guess(game.get_guess()+1)
         game.letters.remove(letter.upper())
-
+        game.streak = 0
     return game.draw_hangman(MESSAGES) and\
             game.print_word(MESSAGES)
 
@@ -41,7 +43,7 @@ def user_guessing(MESSAGES,game):
             round_continue = check_letter(user_input,\
                                 game,MESSAGES)
         print("-------------------------------------------------")
-    
+        print(f"score {game.player.get_score()}")
     #ask if user want to continue another round
     while True:
         user_continue = input(MESSAGES[13]) # expect 'y' or 'n'
