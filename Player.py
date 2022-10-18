@@ -1,7 +1,5 @@
-
-
-RANKING_FILE = 'utilities/ranking.txt'
-LEVELS = ('EASY','MEDIUM','HARD') #tuple of game levels
+from constants import RANKING_FILE
+from constants import LEVELS
 
 class Player():
     """A Player who is playing hangman"""
@@ -102,12 +100,11 @@ class Player():
                             pname=name,\
                             plevel=level,\
                             pscore=previous_highs[j][3])
-                    rfile.write(player_str+"\n")
+                    rfile.write(player_str)
                     j += 1
                     if j == 10:
                         break
             rfile.close()
-        return " "
 
     def __str__(self):
         return f"{self.name}'s current score is {self.__score}"

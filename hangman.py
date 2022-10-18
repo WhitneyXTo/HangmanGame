@@ -1,8 +1,8 @@
+from constants import RANKING_FILE
+from constants import MESSAGE_FILE
+from constants import INSTRUCTION_FILE
 from Player import Player
 from Game import Game
-
-MESSAGE_FILE = 'utilities/messages.txt'
-INSTRUCTION_FILE = 'utilities/instruction.txt'
 
 def check_letter(letter:str,game:Game,MESSAGES:list):
     """checks letter that user input in"""
@@ -24,7 +24,6 @@ def check_letter(letter:str,game:Game,MESSAGES:list):
 
 def user_guessing(MESSAGES,game):
     """lets user start guessing letter by letter"""
-
     #initial print out
     game.draw_hangman(MESSAGES) 
     game.print_word(MESSAGES)
@@ -42,15 +41,21 @@ def user_guessing(MESSAGES,game):
             #if True this round is ended
             round_continue = check_letter(user_input,\
                                 game,MESSAGES)
+        print(game.player.__str__())
         print("-------------------------------------------------")
-        print(f"score {game.player.get_score()}")
+    
     #ask if user want to continue another round
     while True:
-        user_continue = input(MESSAGES[13]) # expect 'y' or 'n'
-        if user_continue.upper()=='Y':
+        user_continue = input(MESSAGES[13].strip()+" ")
+        if user_continue.upper()=='A':
             return False
-        elif user_continue.upper()=='N':
-            return True
+        elif user_continue.upper()=='Q':
+            return True 
+        elif user_continue.upper()=='R':
+            rfile = open(RANKING_FILE,'r')
+            for line in rfile.readlines():
+                print(line)
+            rfile.close()
         else:
             print(MESSAGES[5])
 

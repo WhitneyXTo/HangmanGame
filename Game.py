@@ -51,9 +51,9 @@ class Game():
         current_score = self.player.get_score()
         base_score = 100
         if self.player.level == "MEDIUM":
-            base_score = 400
+            base_score = 250
         elif self.player.level == "HARD":
-            base_score = 800
+            base_score = 500
         self.player.set_score(current_score
                             +self.streak*base_score)
 

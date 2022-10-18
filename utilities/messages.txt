@@ -11,7 +11,7 @@ Congratulation {pname}!!! You got the word with {num_guess} wrong guesses!
 Sorry {pname}, you have used all your guesses, your word is {pword}.
 Please enter your letter of guessing: 
 Invalid input or letter has already been used!
-Do you want to play the game again? (y/n): 
+Select 'r' for ranking board, 'a' to play again, 'q' to quit: 
 Ranking       Player_Name       Game_Level       Score
 -------       -----------       ----------       -----
    {prank}          {pname}           {plevel}          {pscore} 

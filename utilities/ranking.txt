@@ -1,12 +1,12 @@
 Ranking       Player_Name       Game_Level       Score
 -------       -----------       ----------       -----
-   1          PLAYER2            HARD            4000 
-   2          PLAYER3            EASY            2800 
-   3          PLAYERX            MEDIUM          2400 
-   4          LEE                HARD            2400 
-   5          PLAYER6            MEDIUM          1200 
-   6          PLAYER4            MEDIUM          1200 
-   7          PLAYER1            MEDIUM          1000 
-   8          CHOCOLAT           MEDIUM          800 
-   9          PLAYER7            HARD            800 
-   10          COCO               MEDIUM          700 
+   1          MIFFIN             EASY            2100 
+   2          WHITT              MEDIUM          250 
+   3          MOCHI              MEDIUM          250 
+   4          COCOCO             HARD            0 
+   5          COCOCO             HARD            0 
+   6          WHITNEY            MEDIUM          0 
+   7          HARD               HARD            0 
+   8          LACOCO             HARD            0 
+   9          WHITNEY            HARD            0 
+   10          PLAYER2            HARD            0 
