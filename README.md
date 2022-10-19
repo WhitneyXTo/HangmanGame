@@ -1,12 +1,13 @@
 # HangmanGame
-##### Author: Whitney To
-##### Class: CS-521
-##### Date: 10-18-2022
-##### Project: Python program for 'hangman' game
+
+#### Author: Whitney To
+#### Class: CS-521
+#### Date: 10-18-2022
+#### Project: Python program for 'hangman' game
 
 ## HERE IS THE PROGRAM STRUCTURE AND HOW TO RUN IT
 
-To run the program on MAC OS: (run the hangman.py file)
+#### To run the program on MAC OS: (run the hangman.py file)
 
     1. Open a terminal window at the directory with all file listed below
     2. Type in command 'python3 hangman.py'
@@ -14,8 +15,7 @@ To run the program on MAC OS: (run the hangman.py file)
     4. When program first starts, you can select 'i' for instruction for more game's details
     4. If want to exit in middle of game, please use 'control+C' on keyboard
 
-All source code files and utilities files/folders are included in
-    this file called 'hangmangame'. They include:
+#### All source code files and utilities files/folders are included in file called 'hangmangame'. They include:
     
     1. utlitily file:
 
