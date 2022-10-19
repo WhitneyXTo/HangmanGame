@@ -7,13 +7,13 @@
 
 ## HERE IS THE PROGRAM STRUCTURE AND HOW TO RUN IT
 
-#### To run the program on MAC OS: (run the hangman.py file)
+#### To run the program on MAC OS: (run only the hangman.py file)
 
-    1. Open a terminal window at the directory with all file listed below
+    1. Open a terminal window at the directory with all file listed below.
     2. Type in command 'python3 hangman.py'
     3. Follow the prompts appear once the program runs and have fun!
-    4. When program first starts, you can select 'i' for instruction for more game's details
-    4. If want to exit in middle of game, please use 'control+C' on keyboard
+    4. When program first starts, you can select 'i' for instruction for more game's details, or 's' to start game right away.
+    4. If want to exit in middle of game, please use 'control+C' on keyboard.
 
 #### All source code files and utilities files/folders are included in file called 'hangmangame'. They include:
     

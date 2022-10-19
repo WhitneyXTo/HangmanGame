@@ -8,5 +8,5 @@ Ranking       Player_Name       Game_Level       Score
    6          PLAYER2            MEDIUM          1400 
    7          TESTIG             MEDIUM          1200 
    8          MOCHINUT           EASY            900 
-   9          BOTTLE             MEDIUM          600 
-   10          DHFKSD             EASY            600 
+   9          WINNIE             MEDIUM          600 
+   10          BOTTLE             MEDIUM          600 
