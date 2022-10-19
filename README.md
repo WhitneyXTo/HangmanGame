@@ -1,9 +1,9 @@
 # HangmanGame
-###Author: Whitney To
-###Date: 10-18-2022
-###Project: python program for 'hangman' game
+### Author: Whitney To
+### Date: 10-18-2022
+### Project: python program for 'hangman' game
 
-##HERE IS THE PROGRAM STRUCTURE AND HOW TO RUN IT
+## HERE IS THE PROGRAM STRUCTURE AND HOW TO RUN IT
 
 To run the program on MAC OS: (run the hangman.py file)
 
