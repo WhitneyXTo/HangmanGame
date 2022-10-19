@@ -125,7 +125,7 @@ if __name__ == '__main__':
 
     # Unit test
 
-    # Test update_score function inside Game object
+    # Test update_score method of Game object
     test_player = Player()  # Player object
     test_player.name = "TEST_NAME"
     test_player.level = "EASY"
@@ -137,6 +137,14 @@ if __name__ == '__main__':
     test_game.update_score()
     score = test_player.get_score()
     expect = 500
-    assert score == 500,\
-        f"Expected score to be\"{expect}\"\
-             but got score to be\"{score}\""
+    assert score == expect,\
+        f"Expected score to be \"{expect}\" but got \"{score}\" instead!"
+
+    # test get_hword method of Game object
+    test_game.word = "testing"  # 7 letters
+    hword = test_game.get_hword()
+    expect_hword = ['-', '-', '-', '-', '-', '-', '-']  # 7 dashes
+    assert hword == expect_hword,\
+        f"Expected to get: \"{expect_hword}\" but got \"{hword}\" instead!"
+
+    print("All tests run successfully, program exited!")

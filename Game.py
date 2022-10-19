@@ -32,7 +32,7 @@ class Game():
             # call private method to get random word in uppercase
             self.word = self.__get_word(player.level)
             # set hidden word with "-" based on word's length
-            self.hword = self.__get_hword()
+            self.hword = self.get_hword()
 
     # getter and setter for private var guess
     def get_guess(self):
@@ -56,7 +56,7 @@ class Game():
             wfile.close()
             return word.upper().strip()
 
-    def __get_hword(self):
+    def get_hword(self):
         """set hidden word with "-" based on word's length"""
         return list("-"*len(self.word))
 
