@@ -4,11 +4,12 @@ from constants import LEVELS
 class Player():
     """A Player who is playing hangman"""
     
-    def __init__(self,MESSAGES):
+    def __init__(self,MESSAGES=None):
         """initalize Player's properties"""
-        self.__score = 0
-        self.name = self.__get_player_name(MESSAGES)
-        self.level = self.__get_player_level(MESSAGES)
+        if MESSAGES != None:
+            self.__score = 0
+            self.name = self.__get_player_name(MESSAGES)
+            self.level = self.__get_player_level(MESSAGES)
     
     #getter and setter for private var score
     def get_score(self):

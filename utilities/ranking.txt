@@ -1,12 +1,12 @@
 Ranking       Player_Name       Game_Level       Score
 -------       -----------       ----------       -----
-   1          MIFFIN             EASY            2100 
-   2          WHITT              MEDIUM          250 
-   3          MOCHI              MEDIUM          250 
-   4          COCOCO             HARD            0 
-   5          COCOCO             HARD            0 
-   6          WHITNEY            MEDIUM          0 
-   7          HARD               HARD            0 
-   8          LACOCO             HARD            0 
-   9          WHITNEY            HARD            0 
-   10          PLAYER2            HARD            0 
+   1          HARD               HARD            3000 
+   2          MIFFIN             EASY            2100 
+   3          CHARA              MEDIUM          2000 
+   4          WHITNEY            MEDIUM          1750 
+   5          WHITNEY            HARD            1500 
+   6          TESTIG             MEDIUM          1200 
+   7          MOCHINUT           EASY            900 
+   8          DHFKSD             EASY            600 
+   9          NAME               MEDIUM          400 
+   10          GHFHY              EASY            400 

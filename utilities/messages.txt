@@ -1,7 +1,7 @@
 Welcome to Hangman game!
-Do you need to see instruction before start? (y/n): 
+Select 'i' for instruction or 's' to start game:  
 Do you need to see instruction again? 
-Select y' for showing the instruction again or 'n' to start the game:
+Select 'i' for showing the instruction again or 's' to start the game:
 Please enter player name (less than 8 characters):
 Invalid Input!
 Hello {playername}, please choose a game level (easy/medium/hard): 

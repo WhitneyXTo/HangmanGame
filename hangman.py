@@ -67,6 +67,7 @@ def start_game(MESSAGES:str):
     return end_game
 
 if __name__ == '__main__':
+    MESSAGES = ""
     try:
         #open file contains pre-written message
         mfile = open(MESSAGE_FILE,'r')
@@ -80,10 +81,10 @@ if __name__ == '__main__':
         
         #prompt user for input to start game
         while True:
-            instruction = input(start_msg.strip()+" ") #expect y or n 
+            instruction = input(start_msg.strip()+" ") #expect i or s 
             
             #open instruction file, print instruction then close it
-            if(instruction.upper()=='Y'):
+            if(instruction.upper()=='I'):
                 try:
                     ifile = open(INSTRUCTION_FILE,'r')
                 except FileNotFoundError:
@@ -96,7 +97,7 @@ if __name__ == '__main__':
                     continue
             
             #start game
-            elif(instruction.upper() == 'N'):
+            elif(instruction.upper() == 'S'):
                 end_game = False
                 while not end_game:
                     end_game = start_game(MESSAGES)
@@ -105,4 +106,15 @@ if __name__ == '__main__':
             
             #invalid input from user
             else:
-                print('Invalid entry, accept \'y\' or \'n\' only!')
+                print('Invalid entry, accept \'i\' or \'s\' only!')
+    
+    ### Unit test
+    test_player = Player()
+    test_player.name = "TEST_NAME"
+    test_player.level = "EASY"
+    test_player.set_score(100)
+
+    test_game = Game()
+    test_game.player = test_player
+    test_game.streak = 5
+    test_game.update_score()

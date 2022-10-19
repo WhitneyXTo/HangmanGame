@@ -10,17 +10,18 @@ class Game():
     """A hangman game and its properties"""
     game_name = "Hangman"
     
-    def __init__(self,player):
+    def __init__(self,player=None):
         """initialize # guesses, letters to guess, word, hidden word"""
-        self.__guess=0
-        self.streak = 0 # consecutive correct answer
-        self.player=player
-        #copy of set of all uppercase letter 
-        self.letters=copy.deepcopy(LETTERS)
-        #call private method to get random word in uppercase
-        self.word = self.__get_word(player.level)
-        #set hidden word with "-" based on word's length
-        self.hword = self.__get_hword()
+        if player != None:
+            self.__guess=0
+            self.streak = 0 # consecutive correct answer
+            self.player=player
+            #copy of set of all uppercase letter 
+            self.letters=copy.deepcopy(LETTERS)
+            #call private method to get random word in uppercase
+            self.word = self.__get_word(player.level)
+            #set hidden word with "-" based on word's length
+            self.hword = self.__get_hword()
 
     #getter and setter for private var guess
     def get_guess(self):
@@ -51,9 +52,9 @@ class Game():
         current_score = self.player.get_score()
         base_score = 100
         if self.player.level == "MEDIUM":
-            base_score = 250
+            base_score = 200
         elif self.player.level == "HARD":
-            base_score = 500
+            base_score = 300
         self.player.set_score(current_score
                             +self.streak*base_score)
 
@@ -91,6 +92,3 @@ class Game():
             self.player.player_ranking(MESSAGES)
             return False
         return True
-    
-
-    
