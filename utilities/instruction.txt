@@ -1,7 +1,29 @@
---------------------------------------------------
+---------------------------------------------------------------------------
 Instruction to Hangman Game:
 
+    When the game starts, you will enter your name, then the level of difficulty of the game.
+    
+    There are 3 levels, easy, medium and hard.
+    
+    A random word will then be chosen based on the level and hidden under symbols '---',
+    
+    1 '-' represents 1 letter and you are allowed to guess 1 letter at a time. 
+    
+    You are allowed 7 wrong guesses and each incorrect guess will contribute 1 more pattern to the hangman drawing.
+    
+    A box of all the available letters that you can enter will be provided for your reference.
+    
+    You will lose when the drawing of hangman is completed.
+    
+    You can win when you guess all letters in the chosen word correctly and with less than 7 wrong guesses.
+    
+    Score will be calculated with a base of 100 point per correct guess and you would get more if you have consecutive right guesses.
+    
+    Your name and score will be compared and placed into the ranking board when the game round is done.
+    
+    when the round is done, you would have option to see the ranking board, or restart the game, or quit the program.
 
-
-Have fun!
---------------------------------------------------
+    You can enter 's' to start game after this instruction.
+    
+    Have fun!
+----------------------------------------------------------------------------

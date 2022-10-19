@@ -109,12 +109,14 @@ if __name__ == '__main__':
                 print('Invalid entry, accept \'i\' or \'s\' only!')
     
     ### Unit test
-    test_player = Player()
+
+    # Test update_score function inside Game object
+    test_player = Player() # Player object
     test_player.name = "TEST_NAME"
     test_player.level = "EASY"
     test_player.set_score(100)
 
-    test_game = Game()
+    test_game = Game() # Game object
     test_game.player = test_player
     test_game.streak = 5
     test_game.update_score()

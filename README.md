@@ -3,7 +3,15 @@ Author: Whitney To
 Date: 10-18-2022
 Project: python program for 'hangman' game
 
-HERE IS THE INSTRUCTION OF HOW TO RUN THIS PROGRAM
+HERE IS THE PROGRAM STRUCTURE AND HOW TO RUN IT
+
+To run the program on MAC OS: (run the hangman.py file)
+
+    1. Open a terminal window at the directory with all file listed below
+    2. Type in command 'python3 hangman.py'
+    3. Follow the prompts appear once the program runs and have fun!
+    4. When program first starts, you can select 'i' for instruction for more game's details
+    4. If want to exit in middle of game, please use 'control+C' on keyboard
 
 All source code files and utilities files/folders are included in
     this file called 'hangmangame'. They include:
@@ -38,28 +46,25 @@ All source code files and utilities files/folders are included in
     4. Player.py
         This python file is a Player class with attributes of player's name, player's game level, and player's score on the game. The Player class has methods to
             
-            1. get/set private variable 'score'
-            2. prompt user to enter player's name
-            3. prompt user to enter game level 
-            4. check player's score and ranking 
-            5. modify and return a string input
-            6. return a string infomation (__str__)
-            7. return a copy of current Player object (__copy__)
+            4.1 get/set private variable 'score'
+            4.2 prompt user to enter player's name
+            4.3 prompt user to enter game level 
+            4.4 check player's score and ranking 
+            4.5 modify and return a string input
+            4.6 return a string infomation (__str__)
+            4.7 return a copy of current Player object (__copy__)
 
     5. Game.py
         This python file is a Game class with attributes of number of guesses, correct guess streak, available letters, word to guess, hidden word to show user and a player object. The Game class has methods to
             
-            1. get/set private variable 'guess'
-            2. get word and hidden word
-            3. update score
-            4. draw hangman based on guesses
-            5. print out letter guessed
+            5.1. get/set private variable 'guess'
+            5.2 get word and hidden word
+            5.3 update score
+            5.4 draw hangman based on guesses
+            5.5 print out letter guessed
 
 
     6. hangman.py
-
-
-To run the program on MAC OS:
-    1. Open a terminal window at the current directory with all file listed above
-    2. Type in command 'python3 hangman.py'
-    3. Follow the prompt appear once the program runs and have fun!
+        This is the main source code file to be run to start the game.
+        File contains code logic and few functions to call upon other codes/files to sucessfully execute the game.
+        Main code will call 'start_game' function to start game. This function will call 'user_guessing' function to get user's input letter, which will be checked for validation with 'check_letter' function.

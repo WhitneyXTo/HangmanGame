@@ -55,6 +55,29 @@ class Player():
             string += " "
             i += 1
         return string
+    
+    def __add_to_ranking(self):
+        """put current player into empty high_score list"""
+        high_scores = [[1,self.name,self.level,self.__score],]
+        return high_scores
+
+    def __insert_to_ranking(self,ranking_info):
+        """insert current player into high_score list with others"""
+        high_scores = []
+        i = 2
+        while i < len(ranking_info):
+            high_scores.append((",".join(ranking_info[i].split()))\
+                                            .split(","))
+            i += 1
+        previous_scores = [int(item[3]) for item in high_scores]     
+                
+        i = 0 #index for previous scores list
+        while i < len(previous_scores):
+            if self.__score >= previous_scores[i]:
+                high_scores.insert(i,[1,self.name,self.level,self.__score])
+                break
+            i += 1
+        return high_scores
 
     def player_ranking(self,MESSAGES):
         """checks and records player's score to ranking board"""
@@ -64,53 +87,37 @@ class Player():
             print(f'Error: file not found in directory!')
         else:
             ranking_info =  list(rfile.readlines())
-            previous_highs = []
+            high_scores = []
             if (len(ranking_info)==2):
-                player_str = MESSAGES[16].format(\
-                            prank = 1,\
-                            pname = self.__format_string(self.name,8),\
-                            plevel = self.__format_string(self.level,8),\
-                            pscore = self.__score)
-                rfile.write("\n")
-                rfile.write(player_str)
+                high_scores = self.__add_to_ranking(MESSAGES)
             elif (len(ranking_info)>2):
-                i = 2
-                while i < len(ranking_info):
-                    previous_highs.append((",".join(ranking_info[i].split()))\
-                                            .split(","))
-                    i += 1
-                previous_scores = [int(item[3]) for item in previous_highs]     
-                
-                i = 0 #index for previous scores list
-                while i < len(previous_scores):
-                    if self.__score >= previous_scores[i]:
-                        previous_highs.insert(i,[1,self.name,self.level,self.__score])
-                        break
-                    i += 1
-                rfile.truncate(0)
-                rfile.seek(0)
-                rfile.write(MESSAGES[14])
-                rfile.write(MESSAGES[15])
-                j = 0
-                while j < len(previous_highs):
-                    previous_highs[j][0] = j+1
-                    name = self.__format_string(previous_highs[j][1],8)
-                    level = self.__format_string(previous_highs[j][2],6)
-                    player_str = MESSAGES[16].format(\
-                            prank=previous_highs[j][0],\
-                            pname=name,\
-                            plevel=level,\
-                            pscore=previous_highs[j][3])
-                    rfile.write(player_str)
-                    j += 1
-                    if j == 10:
-                        break
+                high_scores = self.__insert_to_ranking(ranking_info)
+            rfile.truncate(0)
+            rfile.seek(0)
+            rfile.write(MESSAGES[14])
+            rfile.write(MESSAGES[15])
+            j = 0
+            while j < len(high_scores):
+                high_scores[j][0] = j+1
+                name = self.__format_string(high_scores[j][1],8)
+                level = self.__format_string(high_scores[j][2],6)
+                player_str = MESSAGES[16].format(\
+                        prank=high_scores[j][0],\
+                        pname=name,\
+                        plevel=level,\
+                        pscore=high_scores[j][3])
+                rfile.write(player_str)
+                j += 1
+                if j == 10:
+                    break
             rfile.close()
 
     def __str__(self):
+        """returns a string information talling player's score"""
         return f"{self.name}'s current score is {self.__score}"
     
     def __copy__(self,MESSAGES):
+        """return a copy of current player object"""
         new_player = Player(MESSAGES)
         new_player.name = self.name
         new_player.level = self.level
