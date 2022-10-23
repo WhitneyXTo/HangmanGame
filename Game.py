@@ -61,6 +61,7 @@ class Game():
         return list("-"*len(self.word))
 
     def update_score(self):
+        """updates player's score"""
         current_score = self.player.get_score()
         base_score = 100
         if self.player.level == "MEDIUM":

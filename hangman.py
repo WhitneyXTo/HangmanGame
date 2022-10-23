@@ -123,7 +123,8 @@ if __name__ == '__main__':
             else:
                 print('Invalid entry, accept \'i\' or \'s\' only!')
 
-    # Unit test
+
+    ## Unit test
 
     # Test update_score method of Game object
     test_player = Player()  # Player object

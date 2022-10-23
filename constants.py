@@ -27,6 +27,7 @@ WORD_BANKS = {"EASY": "wordbank/easywords.txt",
               "MEDIUM": "wordbank/mediumwords.txt",
               "HARD": "wordbank/hardwords.txt"}
 
+#template for drawing out hangman
 INIT_DRAWING=[ 
     [" "," "," "," ","_","_","_","_","_","_","_","_","_","_"," "],
     [" "," "," "," ","|"," "," "," "," "," "," "," "," ","|"," "],
@@ -37,6 +38,7 @@ INIT_DRAWING=[
     ["_","_","_","_","|","_","_","_","_","_","_"," "," "," "," "]
     ] # list
 
+#pattern to input to template above
 PATTERNS = { 
             1:[2,13,"O"],
             2:[3,13,"|"],
