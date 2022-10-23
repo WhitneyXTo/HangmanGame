@@ -1,12 +1,12 @@
 Ranking       Player_Name       Game_Level       Score
 -------       -----------       ----------       -----
-   1          HARD               HARD            3000 
+   1          HARD               HARD            2200 
    2          MIFFIN             EASY            2100 
    3          CHARA              MEDIUM          2000 
    4          WHITNEY            MEDIUM          1750 
    5          WHITNEY            HARD            1500 
-   6          PLAYER2            MEDIUM          1400 
-   7          TESTIG             MEDIUM          1200 
-   8          A                  HARD            900 
-   9          MOCHINUT           EASY            900 
-   10          S                  HARD            600 
+   6          PLAYER2            MEDIUM          1200 
+   7          MUFFIN             EASY            1000 
+   8          TESTIG             MEDIUM          900 
+   9          A                  HARD            900 
+   10          MOCHINUT           EASY            0 
